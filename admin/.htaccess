@@ -1,0 +1,10 @@
+DirectoryIndex autoload.php index.php
+
+IndexIgnore *
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ otobus/admin/autoload.php?request=$1 [QSA,L]

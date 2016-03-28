@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - otobus@localhost" uuid="5b10854b-8ca1-45a7-b00f-8240e8ece8c8">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>otobus.*</schema-pattern>
+      <default-schemas>otobus.*</default-schemas>
+    </data-source>
+  </component>
+</project>

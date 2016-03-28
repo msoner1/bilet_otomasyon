@@ -1,0 +1,686 @@
+#loading {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: block;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99999999;
+    text-align: center;
+}
+#loading-image {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    top: 50px;
+    z-index: 100;
+}
+.menu{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.panel{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.bilet-alma-form form{
+    padding: 20px;
+}
+
+.Cas {
+    width: 280px;
+    z-index: 99999999999999999999999999999;
+    position: absolute;
+    right: 7%;
+    top:60px;
+    height: 100px;
+    background-color: rgba(255,255,255,.8);;
+    padding: 1em 0;
+}
+.Cas span{
+    position: absolute;
+   right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.Cas-rgt {
+    float: left;
+    width: 22%;
+}
+.Cas-lef {
+    float: right;
+    width: 71%;
+}
+.Cas h5 {
+    color: #464545;
+    font-size: 1.2em;
+}
+.Cas p {
+    color: #999;
+    font-size: 1em;
+}
+.Cas img {
+    margin-left: 5px;
+    height: 70px;
+}
+
+
+.staticPageHeader3 {
+    background: #05a9c4 url("../images/pageHeaderBg2.png") center top no-repeat;
+    margin: 0 0 10px 0;
+}
+.autoCenter {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+.staticPageHeader3 h1 {
+    color: #fff;
+    font-size: 30px;
+    padding: 20px;
+}
+.staticPageContent .pageContent {
+    background: #fff;
+    font: 12px/22px Arial,sans-serif;
+    color: #393939;
+    padding: 15px;
+    position: relative;
+    z-index: 10;
+}
+.helpPageinfoBox {
+    margin: 20px 0 40px;
+}
+.infoBox {
+    background: #dcdcdc url(../images/infoIcon.png) 30px 20px no-repeat;
+    min-height: 95px;
+    font-size: 12px;
+    font-family: Arial,sans-serif;
+    line-height: 20px;
+    padding: 30px 20px 20px 110px;
+    margin: 30px;
+}
+
+
+.otobus-box {
+    border: 1px solid #dcdfdf;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+#faq-question-type {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #383838;
+    margin-bottom: 0;
+}
+.otobus-box-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#faq-question-type > ul {
+    list-style: none;
+    padding-left: 0;
+}
+#faq-question-type > ul li:first-child a {
+    border-left: none;
+}
+#faq-question-type > ul li a {
+    cursor: default;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 0 15px;
+    line-height: 15px;
+    color: #fff;
+    border-left: 1px solid #fff;
+    font-size: 15px;
+}
+#faq-question-type > ul li {
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+}
+.faq.active {
+    display: block;
+}
+.panel-group .panel {
+    margin-bottom: 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+
+.slider{
+    width: 100%;
+}
+.detail-title{
+    font-size: 10px;
+    background-color: #dddddd;
+}
+.detail-title h1{
+    font-size: 20px;
+}
+.icon-change{
+    font-size: 40px;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+.ticket-search
+{
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    width: 50%;
+    padding: 20px;
+    box-shadow: black 10px 10px 10px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.6);
+}
+.slide_text
+{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 40%;
+    color: #000000;
+}
+.icon{
+    margin: 2px;
+}
+.navbar{
+    margin-bottom: -10px;
+}
+.navbar-link{
+    cursor: pointer;
+}
+.logos{
+    background: #fff;
+    border-bottom: 1px solid #a0a0a0;
+    padding: 9px 0 13px 0;
+}
+.logos .href1 {
+    display: inline-block;
+    background: url(../images/firmalar.png) no-repeat;
+    background-position: 0 0;
+    width: 122px;
+    height: 49px;
+    text-indent: -9999px;
+}
+.logos .href2 {
+    display: inline-block;
+    background: url(../images/firmalar.png) no-repeat;
+    background-position: -122px 0;
+    width: 115px;
+    height: 49px;
+    text-indent: -9999px;
+}
+.logos .href3 {
+    display: inline-block;
+    background: url(../images/firmalar.png) no-repeat;
+    background-position: -237px 0;
+    width: 130px;
+    height: 49px;
+    text-indent: -9999px;
+}
+.logos .href4 {
+    display: inline-block;
+    background: url(../images/firmalar.png) no-repeat;
+    background-position: -367px 0;
+    width: 122px;
+    height: 49px;
+    text-indent: -9999px;
+}
+.logos .href5 {
+    display: inline-block;
+    background: url(../images/firmalar.png) no-repeat;
+    background-position: -489px 0;
+    width: 128px;
+    height: 49px;
+    text-indent: -9999px;
+}
+.logos .href6 {
+    display: inline-block;
+    background: url(../images/firmalar.png) no-repeat;
+    background-position: -617px 0;
+    width: 139px;
+    height: 49px;
+    text-indent: -9999px;
+}
+.logos .href7 {
+    display: inline-block;
+    background: url(../images/firmalar.png) no-repeat;
+    background-position: -756px 0;
+    width: 136px;
+    height: 49px;
+    text-indent: -9999px;
+}
+.bottom-bar{
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.bottom-bar-list{
+    list-style: none;
+    padding: 10px;
+    color: #2d2e2b;
+    font-size: 12px;
+    overflow: hidden;
+    text-align: left;
+    letter-spacing: -1px;
+}
+.bottom-bar-list li{
+    float: left;
+    width: 25%;
+    padding-top: 7px;
+}
+section{
+    min-height: 500px;
+    padding: 20px;
+    background-color: #F3F7F8;
+}
+.boxes{
+    transition-duration: 0.3s;
+    margin-bottom: 20px;
+    background-color: #66afe9;
+    border-radius: 20px;
+    height: auto;
+}
+.boxes:hover{
+    box-shadow: #0f0f0f 0 0 10px;
+}
+.boxes-header{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #2d2e2b;
+    height: 50px;
+    color: #f7f7f7;
+}
+.boxes-header span{
+    color: #f7f7f7;
+    margin: 15px;
+    font-size: 17px;
+}
+.boxes .seferler{
+    padding: 10px;
+}
+
+.sefer{
+    margin-top: 5px;
+}
+
+.destinasyon{
+    font-size: 20px;
+    border-bottom: 1px dashed #2d2e2b;
+}
+.date{
+    font-style: italic;
+}
+.fiyat{
+   font-size: 25px;
+    margin: 5px;
+}
+.tl{
+    font-size: 15px;
+}
+.list-links{
+    color: #2d2e2b;
+}
+.list-links:hover{
+    text-decoration: solid;
+    color: #000;
+}
+
+
+.locations-area{
+    margin-top: 20px;
+}
+
+.city-bus-information-area {
+    margin-bottom: 20px;
+}
+.city-bus-link-area {
+    padding: 15px;
+    border: 1px solid #e3e3e3;
+    position: relative;
+}
+.city-bus-information-title {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    padding: 16px 20px;
+    background-color: #00acd4;
+}
+.city-bus-link-area ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.city-bus-link-area ul.list-inline li {
+    width: 32%;
+}
+.city-bus-link-area ul li a {
+    color: #333;
+    font-weight: 600;
+    font-size: 13px;
+    padding-bottom: 5px;
+    min-width: 160px;
+    display: inline-block;
+}
+.transportation li{
+    list-style: none;
+}
+.transportation li * {
+    display: inline-block;
+}
+.transportation li a {
+    text-decoration: none;
+}
+.transportation li:last-child a {
+    padding-bottom: 0 !important;
+
+}
+.transportation li p {
+    margin-left: 15px;
+    color: #000;
+    font-weight: 100;
+    font-size: 16px;
+}
+.places-to-go {
+    max-width: 100% !important;
+    height: 375px;
+    overflow-y: scroll;
+    position: relative;
+    padding: 15px;
+    border: 1px solid #e3e3e3;
+}
+.places-to-go li:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+.places-to-go li {
+    list-style: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+.places-to-go li * {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.places-to-go li p {
+    margin-left: 10px;
+    color: #000;
+    font-weight: 100;
+    font-size: 16px;
+    max-width: 150px;
+}
+
+
+.campaigns{
+    padding: 10px;
+}
+.campaigns h5{
+    color: #df2b1f;
+    font-weight: bold;
+}
+.row-oto{
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.uyelik-alani{
+    border: 10px solid #dddddd;
+    background-color: #EEEEEE;
+}
+.form-uyelik{
+    padding: 10px 20px;
+}
+.form-uyelik .row{
+    margin-bottom: 10px;
+}
+.formTitle{
+    background-color: #1b6d85;
+    color: #f7f7f7;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.containerRadioCheck {
+    position: relative;
+    font-size: 12px;
+    color: #505063;
+    cursor: pointer;
+    width: auto !important;
+    padding: 10px 0 !important;
+}
+.pageDesc{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contractText{
+    height: 300px;
+    overflow: scroll;
+    color: #505063;
+    font: 12px arial;
+    background-color: #dcdcdc;
+    line-height: 18px;
+}
+
+
+.bilet-search-back{
+    background-image: url("../images/search-back.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    min-height: 1000px;
+}
+.bilet-search{
+    margin-top: 100px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+}
+.bilet-search .form{
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 10px solid #1E2732;
+}
+.bilet-search h1{
+    margin-left: -15px;
+    margin-top: 0px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-right: -15px;
+    font-size: 30px;
+    background-color: #383838;
+    color: #ffffff;
+}
+#OtobusCinsiyetSec {
+    width: 234px;
+    height: 56px;
+    margin-left: 50px;
+    background-image: url("../images/RenkAciklama.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#OtobusOnKisim {
+    width: 236px;
+    height: 69px;
+    margin-left: 50px;
+    background-image: url("../images/Otobus_On.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#OtobusArkaKisim {
+    opacity: 1;
+    width: 236px;
+    height: 22px;
+    margin-left: 50px;
+    background-image: url("../images/Otobus_Arka.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#Koltuklar {
+    opacity: 1;
+    width: 226px;
+    height: 603px;
+    margin-left: 60px;
+    background-image: url("../images/otobusSablon.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.koltuk {
+    width: 39px;
+    height: 42px;
+    color: #656565;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.yesilKoltuk {
+    background-image: url("../images/ky.gif");
+}
+.griKoltuk {
+    background-image: url("../images/kg.gif");
+    cursor:default;
+}
+.maviKoltuk {
+    background-image: url("../images/km.gif");
+}
+.pembeKoltuk {
+    background-image: url("../images/kp.gif");
+}
+.secili.yesilKoltuk {
+    background-image: url("../images/kys.gif");
+}
+.secili.maviKoltuk {
+    background-image: url("../images/kms.gif");
+}
+.secili.pembeKoltuk {
+    background-image: url("../images/kps.gif");
+}
+.kapi {
+    text-align: right;
+    font-size: 10px;
+    font-family: verdana;
+}
+
+.koridor {
+    width: 45px !important;
+}
+.koridor {
+    width: 39px;
+    height: 42px;
+}
+.ozellikler{
+    padding: 2px;
+    cursor: default;
+}
+
+
+.panel-footer{
+    border-top: #3fb7ff solid 10px;
+    background-color: #1E2732;
+}
+.footer-links a{
+    color: #1b6d85;
+    text-shadow: #000 5px 5px 5px;
+    display: block;
+}
+.footer-links .col-md-3{
+  border-left: 2px solid #0f0f0f;
+}
+.socials li{
+    float: right;
+    margin-left: 5px;
+    margin-top: 10px;
+    list-style: none;
+}
+.twitter , .facebook , .google{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+.twitter:hover , .facebook:hover , .google:hover{
+    box-shadow: #0f0f0f 5px 5px 5px;
+}
+.facebook{
+    background-image: url("../images/face.png");
+}
+.twitter{
+    background-image: url("../images/twitter.png");
+}
+.google{
+    background-image: url("../images/google.png");
+}
+@media(max-width: 1200px) {
+    .icon-change{
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transform: rotate(0deg);
+    }
+    .city-bus-link-area ul.list-inline li {
+        width: 100%;
+    }
+    #datepicker{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .ticket-search
+    {
+        position: relative;
+        top: 10px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        z-index: 999999;
+    }
+    .bottom-bar{
+        display: none;
+    }
+    .slide_text{
+        top: 10px;
+    }
+    .slide_text h1{
+        font-size: 20px;
+    }
+    .logos{
+        margin-top: 20px;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+    #OtobusCinsiyetSec {
+        margin-left: 10px;
+    }
+    #OtobusOnKisim {
+        margin-left: 10px;
+    }
+    #OtobusArkaKisim {
+        margin-left: 10px;
+    }
+    #Koltuklar {
+        margin-left: 20px;
+    }
+    .Cas {
+        right: auto;
+        left: 7%;
+    }
+}
