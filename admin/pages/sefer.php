@@ -33,7 +33,13 @@ if(isset($_POST['ekle'])){
     }
     else{
         $baslangic = change_date_to_sql($_POST['baslangic_tarih']);
-        $bitis = change_date_to_sql($_POST['bitis_tarih']);
+        if($sefer_tipi === "2" ){
+            $bitis = change_date_to_sql($_POST['bitis_tarih']);
+        }
+        else{
+            $bitis = null;
+        }
+
         $saat = $saat.":00:00";
 
         $db->bindMore(array("nereye" => $nereye_id , "nereden" => $nereden_id , "firma" => $firma_id , "sefer_tip" => $sefer_tipi_id , "baslangic" => $baslangic , "bitis" => $bitis , "fiyat" => $fiyat , "saat" => $saat , "otobus" => $otobus_id));
