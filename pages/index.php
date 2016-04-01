@@ -13,7 +13,7 @@ if(count($yaklasan_seferler) < 5){
 INNER JOIN il_ilce nereden ON seferler.nereden = nereden.id
 INNER JOIN il_ilce nereye ON seferler.nereye = nereye.id
 WHERE sefer_ozellik_basla<CURDATE()+INTERVAL 1 DAY AND
-sefer_ozellik = 3");
+sefer_ozellik = 3 LIMIT 5");
 }
 
 $tpl->assign('yaklasan_seferler',$yaklasan_seferler);
