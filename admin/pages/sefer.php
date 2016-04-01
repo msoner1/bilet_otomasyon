@@ -1,9 +1,9 @@
 <?php
-$iller =  $db->query("SELECT * FROM il_ilce");
+$iller =  $db->query("SELECT * FROM il_ilce ORDER BY ad");
 
 $tpl->assign('iller',$iller);
 
-$firmalar =  $db->query("SELECT * FROM firmalar");
+$firmalar =  $db->query("SELECT * FROM firmalar ORDER BY firma_ad");
 
 $tpl->assign('firmalar',$firmalar);
 
@@ -11,7 +11,7 @@ $sefer_tipi =  $db->query("SELECT * FROM sefer_ozellik");
 
 $tpl->assign('sefer_tipi',$sefer_tipi);
 
-$otobus =  $db->query("SELECT * FROM otobus_tip");
+$otobus =  $db->query("SELECT * FROM otobus_tip ORDER BY tip_adi");
 
 $tpl->assign('otobus',$otobus);
 
