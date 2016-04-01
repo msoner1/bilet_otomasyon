@@ -22,7 +22,7 @@ if(isset($_GET['gecmis'])){
     $gecmis_biletler =  $db->query("SELECT ad_soyad,DATE_FORMAT(rezervasyonlar.tarih, '%d/%m/%Y') as tarih,koltuk,TIME_FORMAT(seferler.saati , '%H:%m') as saati,nereden.ad as nereden,nereye.ad as nereye FROM rezervasyonlar
 INNER JOIN seferler ON seferler.id = rezervasyonlar.sefer_id
 INNER JOIN il_ilce nereden ON seferler.nereden = nereden.id
-INNER JOIN il_ilce nereye ON seferler.nereye = nereye.id WHERE uye_id=:id AND tarih < CURDATE()");
+INNER JOIN il_ilce nereye ON seferler.nereye = nereye.id WHERE uye_id=:id AND tarih < CURDATE() LIMIT 50");
 
     if(empty($gecmis_biletler)){
         $tpl->assign("yok","1");
@@ -35,7 +35,7 @@ else{
     $gelecek_biletler =  $db->query("SELECT ad_soyad,DATE_FORMAT(rezervasyonlar.tarih, '%d/%m/%Y') as tarih,koltuk,TIME_FORMAT(seferler.saati , '%H:%m') as saati,nereden.ad as nereden,nereye.ad as nereye FROM rezervasyonlar
 INNER JOIN seferler ON seferler.id = rezervasyonlar.sefer_id
 INNER JOIN il_ilce nereden ON seferler.nereden = nereden.id
-INNER JOIN il_ilce nereye ON seferler.nereye = nereye.id WHERE uye_id=:id AND tarih >= CURDATE()");
+INNER JOIN il_ilce nereye ON seferler.nereye = nereye.id WHERE uye_id=:id AND tarih >= CURDATE() LIMIT 50");
 
     if(empty($gelecek_biletler)){
         $tpl->assign("yok","1");
