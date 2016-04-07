@@ -1,0 +1,123 @@
+CREATE TABLE firmalar
+(
+    firma_id INT(6) PRIMARY KEY NOT NULL,
+    firma_ad VARCHAR(30) NOT NULL
+);
+CREATE TABLE admins
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    ad_soyad VARCHAR(80) NOT NULL,
+    email VARCHAR(80) NOT NULL,
+    sifre VARCHAR(150) NOT NULL,
+    statu INT(11) DEFAULT '2',
+    CONSTRAINT admins_statu_id_fk FOREIGN KEY (statu) REFERENCES statu (id)
+);
+CREATE INDEX admins_statu_id_fk ON admins (statu);
+CREATE TABLE statu
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    statu_ad VARCHAR(80) NOT NULL
+);
+CREATE UNIQUE INDEX statu_statu_ad_uindex ON statu (statu_ad);
+CREATE TABLE otobus_tip
+(
+    id INT(3) PRIMARY KEY NOT NULL,
+    tip_adi VARCHAR(120) NOT NULL,
+    tv INT(1) DEFAULT '0',
+    kulaklik INT(1) DEFAULT '0',
+    internet INT(1) DEFAULT '0',
+    rahat_koltuk INT(1) DEFAULT '0'
+);
+CREATE TABLE seferler
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    firma INT(11) NOT NULL,
+    otobus INT(11) NOT NULL,
+    saati TIME NOT NULL,
+    nereden INT(11) DEFAULT '0' NOT NULL,
+    nereye INT(11) DEFAULT '0' NOT NULL,
+    fiyat INT(11) NOT NULL,
+    sefer_ozellik_basla DATE,
+    sefer_ozellik_bitis DATE,
+    sefer_ozellik INT(11) NOT NULL,
+    CONSTRAINT seferler_firmalar_firma_id_fk FOREIGN KEY (firma) REFERENCES firmalar (firma_id),
+    CONSTRAINT seferler_il_ilce_id_2_fk FOREIGN KEY (nereye) REFERENCES il_ilce (id),
+    CONSTRAINT seferler_il_ilce_id_fk FOREIGN KEY (nereden) REFERENCES il_ilce (id),
+    CONSTRAINT seferler_otobus_tip_id_fk FOREIGN KEY (otobus) REFERENCES otobus_tip (id),
+    CONSTRAINT seferler_sefer_ozellik_id_fk FOREIGN KEY (sefer_ozellik) REFERENCES sefer_ozellik (id)
+);
+CREATE INDEX seferler_firmalar_firma_id_fk ON seferler (firma);
+CREATE INDEX seferler_il_ilce_id_2_fk ON seferler (nereye);
+CREATE INDEX seferler_il_ilce_id_fk ON seferler (nereden);
+CREATE INDEX seferler_otobus_tip_id_fk ON seferler (otobus);
+CREATE INDEX seferler_sefer_ozellik_id_fk ON seferler (sefer_ozellik);
+CREATE TABLE il_ilce
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    ad VARCHAR(80) NOT NULL
+);
+CREATE TABLE sefer_ozellik
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    ozellik_ad VARCHAR(80) NOT NULL
+);
+CREATE UNIQUE INDEX sefer_ozellik_ozellik_ad_uindex ON sefer_ozellik (ozellik_ad);
+CREATE TABLE rezervasyonlar
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    sefer_id INT(11) NOT NULL,
+    tarih DATE NOT NULL,
+    koltuk INT(11) NOT NULL,
+    uye_id INT(11) NOT NULL,
+    ad_soyad VARCHAR(80) NOT NULL,
+    cinsiyet INT(1) NOT NULL,
+    satis_tarihi TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP' NOT NULL,
+    CONSTRAINT rezervasyonlar_seferler_id_fk FOREIGN KEY (sefer_id) REFERENCES seferler (id),
+    CONSTRAINT rezervasyonlar_uyeler_id_fk FOREIGN KEY (uye_id) REFERENCES uyeler (id)
+);
+CREATE INDEX rezervasyonlar_seferler_id_fk ON rezervasyonlar (sefer_id);
+CREATE INDEX rezervasyonlar_uyeler_id_fk ON rezervasyonlar (uye_id);
+CREATE TABLE uyeler
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    ad_soyad VARCHAR(80) NOT NULL,
+    sifre VARCHAR(150) NOT NULL,
+    dogum_tarihi DATE,
+    telefon VARCHAR(80) NOT NULL,
+    email_onayi INT(11) DEFAULT '0',
+    email_kampanya_listesi INT(11) NOT NULL,
+    email VARCHAR(80) NOT NULL,
+    parapuan INT(11) DEFAULT '10',
+    cinsiyet INT(1) DEFAULT '1' NOT NULL
+);
+CREATE UNIQUE INDEX uyeler_email_uindex ON uyeler (email);
+CREATE TABLE promosyon_kodlari
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    promosyon_kodu VARCHAR(80) NOT NULL,
+    uye_id INT(11) NOT NULL,
+    kampanya_id INT(11) NOT NULL,
+    CONSTRAINT promosyon_kodlari_kampanyalar_id_fk FOREIGN KEY (kampanya_id) REFERENCES kampanyalar (id),
+    CONSTRAINT promosyon_kodlari_uyeler_id_fk FOREIGN KEY (uye_id) REFERENCES uyeler (id)
+);
+CREATE INDEX promosyon_kodlari_kampanyalar_id_fk ON promosyon_kodlari (kampanya_id);
+CREATE UNIQUE INDEX promosyon_kodlari_promosyon_kodu_uindex ON promosyon_kodlari (promosyon_kodu);
+CREATE INDEX promosyon_kodlari_uyeler_id_fk ON promosyon_kodlari (uye_id);
+CREATE TABLE kampanyalar
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    kampanya_ad VARCHAR(80),
+    kampanya_aciklama TEXT NOT NULL,
+    baslangic DATE NOT NULL,
+    bitis DATE NOT NULL,
+    kampanya_kisa_aciklama VARCHAR(120) NOT NULL
+);
+CREATE TABLE mesajlar
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    email VARCHAR(80) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    ad_soyad VARCHAR(80) NOT NULL,
+    mesaj TEXT NOT NULL,
+    okunma INT(1) DEFAULT '0' NOT NULL
+);
